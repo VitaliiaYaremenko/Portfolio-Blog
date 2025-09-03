@@ -1,0 +1,55 @@
+@use "sass:map";
+
+body {
+  font-family: $main-font-family;
+  font-size: fs('xs');
+  font-weight: fw('regular');
+  background-color: color('basic-white-color');
+  color: color('primary-text-color');
+  line-height: lh('xl');
+}
+
+.container, {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: breakpoints('xl');
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.margin-top {
+  margin-top: space('128px');
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: fw('extra-bold');
+}
+
+.accent-light-grey {
+  background-color: color('light-grey-color');
+}
+
+.accent-light-yellow {
+  background-color: color('accent-light-yellow-color');
+}
+
+.accent-orange {
+  background-color: color('yellow-color');
+}
+
+

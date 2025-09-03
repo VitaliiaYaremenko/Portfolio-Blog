@@ -1,0 +1,56 @@
+@function color($name) {
+  @if map-has-key($colors, $name) {
+    @return map-get($colors, $name);
+  }
+
+  @warn "Unknown color `#{$name}`.";
+  @return null;
+}
+
+
+@function fs ($size) {
+  @if map-has-key($font-sizes, $size) {
+    @return map-get($font-sizes, $size);
+  }
+  @warn "Unknown font-size `#{$size}`";
+  @return null;
+};
+
+
+@function fw ($weight) {
+  @if map-has-key($font-weights, $weight) {
+    @return map-get($font-weights, $weight);
+  }
+
+  @warn "Unknown font-weight `#{$weight}`.";
+  @return null;
+}
+
+
+@function lh ($size) {
+  @if map-has-key($line-height, $size) {
+    @return map-get($line-height, $size);
+  }
+
+  @warn "Unknown line-height `#{$size}`.";
+  @return null;
+}
+
+
+@function space ($size) {
+  @if map-has-key($spacings, $size) {
+    @return map-get($spacings, $size);
+  }
+  @warn " Unknown spacing key: #{$size} ";
+  @return null;
+};
+
+
+@function breakpoints ($size) {
+  @if map-has-key($breakpoints, $size) {
+    @return map-get($breakpoints, $size);
+  }
+
+  @warn "Unknown breakpoint `#{$size}`.";
+  @return null;
+}
