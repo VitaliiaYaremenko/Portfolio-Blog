@@ -1,0 +1,16 @@
+@mixin btn-style($bg, $fg, $hover-bg: null, $border: $bg) {
+  background-color: $bg;
+  color: $fg;
+  border-color: $border;
+
+  &:hover {
+    background-color: if($hover-bg != null, $hover-bg, $bg);
+  }
+};
+
+@mixin btn-size($pad, $size, $lineH: 1.2, $radius: 0) {
+  padding: $pad;
+  font-size: $size;
+  line-height: $lineH;
+  border-radius: $radius;
+}

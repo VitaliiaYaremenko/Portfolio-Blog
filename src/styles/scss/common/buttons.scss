@@ -1,0 +1,57 @@
+$btn-base-styles: (
+        'primary': (
+                bg: color('yellow-color'),
+                fg: color('primary-text-color'),
+                hover-bg: color('yellow-hover-btn'),
+                border: color('yellow-color')
+        ),
+        'secondary': (
+                bg: color('basic-white-color'),
+                fg: color('primary-text-color'),
+                hover-bg: color('lavander-color'),
+                border: color('basic-white-color')
+        ),
+        'ghost': (
+                bg: transparent,
+                fg: color('primary-text-color'),
+                hover-bg: color('lavander-color'),
+                border: color('primary-text-color')
+        )
+);
+
+.btn {
+        font-family: $main-font-family;
+        font-weight: fw('bold');
+        background-color: transparent;
+        border: 2px solid transparent;
+        cursor: pointer;
+
+        transition:
+                background-color .2s ease,
+                color .2s ease,
+                border-color  .2s ease;
+
+        &:focus {
+                outline: none;
+                box-shadow:  0 0 8px 2px rgba(129, 114, 71, 0.35);
+        }
+
+        &:active {
+                transform: translateY(1px);
+        }
+
+        &--lg { @include btn-size(space('custom-18') space('5xl'), fs(md), lh('md')); }
+        &--md { @include btn-size(space('base') space('4xl'), fs(sm), lh('md')); }
+        &--sm { @include btn-size(space('md') space('3xl'), fs(xs), lh('md')); }
+}
+
+@each $name, $cfg in $btn-base-styles {
+        .btn--#{$name} {
+                @include btn-style(
+                                map-get($cfg, bg),
+                                map-get($cfg, fg),
+                                map-get($cfg, hover-bg),
+                                map-get($cfg, border)
+                );
+        }
+}
