@@ -1,0 +1,83 @@
+@use "sass:map";
+
+.footer {
+
+  $social-icon-size: space('base');
+
+  background-color: color('primary-text-color');
+  padding: space(55px) space(80px);
+
+  &__top {
+    @extend %flex-between-center;
+    margin-bottom: space(55px);
+  }
+
+  &__list {
+    @extend %flex-between;
+    gap: space(25px);
+  }
+
+  &__link {
+    @include link-style(color('basic-white-color'));
+  }
+
+  &__subscribe {
+    background-color: color('bg-color-transparent');
+    @extend %flex-between-center;
+    gap: space('6xl');
+    padding: space('6xl') space(80px);
+    margin-bottom: space('3xl');
+
+  }
+
+  &__subscribe-title {
+    color: color('basic-white-color');
+    max-width: 562px;
+  }
+
+  &__subscribe-form {
+    @extend %flex-center-y;
+    gap: space('xl');
+  }
+
+  &__subscribe-input {
+    @include input-base-style(
+                    color('bg-color-transparent'),
+                    color('secondary-text-color'),
+    );
+    @include input-size(space(56px), space(25px), fs('xs'), 323px,);
+    @include border();
+  }
+
+  &__bottom {
+    @extend %flex-between-center;
+  }
+
+  &__contacts {
+    color: color('secondary-text-color');
+
+    a {
+      color: color('secondary-text-color');
+    }
+  }
+
+  &__social-list {
+    @extend %flex-center-y;
+    gap: space(26px);
+  }
+
+  &__social-list i {
+    width: $social-icon-size;
+    height: $social-icon-size;
+  }
+
+  &__social-link i {
+    color: color('secondary-text-color');
+    transition: color .3s;
+
+    &:hover,
+    &:focus-visible {
+      color: color('basic-white-color');
+    }
+  }
+}
