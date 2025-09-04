@@ -1,0 +1,13 @@
+.header {
+  background-color: color('primary-text-color');
+  padding: 12px 0;
+
+  &__content {
+    @extend %flex-between-center;
+  }
+
+  &__navigations {
+    @extend %flex-center-y;
+    gap: space('xxl');
+  }
+}

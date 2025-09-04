@@ -1,0 +1,13 @@
+.nav {
+
+  &__list {
+    @extend %flex-center-y;
+    gap: space( 'xl');
+  }
+
+  &__item {
+    a {
+      @include link-style(color('basic-white-color'));
+    }
+  }
+}
