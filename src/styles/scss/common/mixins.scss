@@ -41,6 +41,43 @@
   }
 }
 
-@mixin border($size: 1px, $color: border-color, $style: solid) {
+@mixin border($size: 1px, $color: 'border-color', $style: solid) {
   border: $size $style color($color);
 }
+
+@mixin input-base-style($bg, $col) {
+  background-color: $bg;
+  color: $col;
+
+  &::placeholder {
+    font-size: fs(xs);
+    color: color(secondary-text-color);
+    text-transform: capitalize;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: color(accent-purple);
+    box-shadow: 0 0 0 3px rgba(239, 195, 75, 0.35);
+  }
+
+  &:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $col;
+    box-shadow: 0 0 0 1000px $bg inset;
+    transition: background-color 9999s ease-out;
+  }
+}
+
+@mixin input-size($height, $pd, $fz, $width: 100%, $radius: 0) {
+  height: $height;
+  padding: 0 $pd;
+  font-size: $fz;
+  width: $width;
+  border-radius: $radius;
+}
+

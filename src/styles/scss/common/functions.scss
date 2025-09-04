@@ -37,13 +37,16 @@
 }
 
 
-@function space ($size) {
+@function space($size) {
+  @if type-of($size) == 'number' {
+    @return $size;
+  }
   @if map-has-key($spacings, $size) {
     @return map-get($spacings, $size);
   }
-  @warn " Unknown spacing key: #{$size} ";
+  @warn "Unknown spacing key: #{$size}";
   @return null;
-};
+}
 
 
 @function breakpoints ($size) {
