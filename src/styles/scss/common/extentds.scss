@@ -1,0 +1,46 @@
+@use "sass:map";
+
+%flex {
+  display: flex;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex-center-y {
+  display: flex;
+  align-items: center;
+}
+
+%flex-center-x {
+  display: flex;
+  justify-content: center;
+}
+
+%flex-center-both {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%main-text-style {
+  font-size: fs(xs);
+  font-weight: fw(regular);
+  color: color(primary-text-color);
+  line-height: lh(xl);
+}
+
+

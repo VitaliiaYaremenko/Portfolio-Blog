@@ -1,0 +1,46 @@
+@use "sass:map";
+
+@mixin btn-style($bg, $fg, $hover-bg: null, $border: $bg) {
+  background-color: $bg;
+  color: $fg;
+  border-color: $border;
+
+  &:hover {
+    background-color: if($hover-bg != null, $hover-bg, $bg);
+  }
+};
+
+@mixin btn-size($pad, $size, $lineH: 1.2, $radius: 0) {
+  padding: $pad;
+  font-size: $size;
+  line-height: $lineH;
+  border-radius: $radius;
+}
+
+@mixin link-style($color: currentColor, $hover: null) {
+  color: $color;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color .3s;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border-bottom-color: if($hover != null, $hover, $color);
+  }
+}
+
+
+@mixin heading($size, $weight: 'regular', $lh: null, $ls: null) {
+  font-size: pick($font-sizes, $size);
+  font-weight: pick($font-weights, $weight);
+  line-height: if($lh != null, pick($line-height, $lh), normal);
+
+  @if $ls != null {
+    letter-spacing: $ls;
+  }
+}
+
+@mixin border($size: 1px, $color: border-color, $style: solid) {
+  border: $size $style color($color);
+}

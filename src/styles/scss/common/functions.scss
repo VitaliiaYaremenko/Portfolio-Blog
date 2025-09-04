@@ -54,3 +54,12 @@
   @warn "Unknown breakpoint `#{$size}`.";
   @return null;
 }
+
+@function pick($map, $maybe-key) {
+
+  @if type-of($maybe-key) == 'string' and map-has-key($map, $maybe-key) {
+    @return map-get($map, $maybe-key);
+  }
+
+  @return $maybe-key;
+}
