@@ -1,0 +1,39 @@
+.banner {
+  padding: space(128px) space(0);
+  background-image:
+          radial-gradient(80.99% 71.93% at 74.58% 0%, rgba(0, 0, 0, 0) 0%, #04040482 100%),
+          url($base-assets-path + 'images/banner/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook.jpg');
+  background-position: center;
+  background-size: cover;
+
+  &__content {
+    color: color('basic-white-color');
+    max-width: 805px;
+  }
+
+  &__subtitle {
+    @include heading(fs('xs'), fw('medium'), lh('sm'), 0.19em);
+    margin-bottom: space('xl');
+  }
+
+  &__title {
+    @include heading(fs( 'xxl'), fw('bold'), lh( 'xs'), -0.04em);
+    margin-bottom: space('xl');
+  }
+
+  &__date {
+    @extend %flex-center-y;
+    gap: space(10px);
+    margin-bottom: space('base');
+  }
+
+  &__speaker {
+    span {
+      color: color('yellow-color');
+    }
+  }
+
+  &__description {
+    margin-bottom: space( '4xl');
+  }
+}
