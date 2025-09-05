@@ -1,0 +1,17 @@
+.join {
+
+  &__content {
+    max-width: 414px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: space('base');
+  }
+
+  &__subtitle {
+    color: color('secondary-text-color');
+    margin-bottom: space('xxl');
+  }
+}
