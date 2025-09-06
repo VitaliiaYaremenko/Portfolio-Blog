@@ -50,6 +50,11 @@ img {
   font-weight: fw('extra-bold');
 }
 
+.color--medium-grey {
+  color: color('secondary-text-color');
+
+}
+
 .accent-light-grey {
   background-color: color('light-grey-color');
 }

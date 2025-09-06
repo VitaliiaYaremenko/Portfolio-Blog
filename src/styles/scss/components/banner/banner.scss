@@ -23,11 +23,11 @@
 
   &__date {
     @extend %flex-center-y;
-    gap: space(10px);
     margin-bottom: space('base');
   }
 
   &__speaker {
+    @extend %divider-line;
     span {
       color: color('yellow-color');
     }

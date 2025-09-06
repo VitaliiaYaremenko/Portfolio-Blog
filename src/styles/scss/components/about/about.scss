@@ -1,0 +1,48 @@
+.about {
+
+  &__wrapper {
+    padding-top: space(23px);
+    position: relative;
+  }
+
+  &__pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__content {
+    background-color: color('lavander-color');
+    @extend %flex;
+    gap: space(60px);
+    padding: space(96px) space(80px);
+  }
+}
+
+
+.about-us {
+  flex: 1 1 50%;
+
+  &__title {
+    max-width: 485px;
+    margin-bottom: space( 'base');
+  }
+
+  &__description {
+    margin-bottom: space('base');
+  }
+}
+
+.about-mission {
+  flex: 1 1 50%;
+
+  &__title {
+    max-width: 480px;
+  }
+}
+
+.about-us__subtitle,
+.about-mission__subtitle {
+  @include heading(fs( 'xs'), fw('semi-bold'), lh('sm'), 0.19em);
+  margin-bottom: space('base');
+}
