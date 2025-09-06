@@ -42,5 +42,14 @@
   color: color(primary-text-color);
   line-height: lh(xl);
 }
-
-
+%divider-line {
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: currentColor;
+    margin: 0 space('md');
+    transform: translateY(1px);
+  }
+}
