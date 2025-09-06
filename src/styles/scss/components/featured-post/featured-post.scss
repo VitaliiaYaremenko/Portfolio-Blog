@@ -1,0 +1,7 @@
+.featured-post {
+  flex: 1 1 50%;
+
+  &__title {
+    margin-bottom: space('xxl');
+  }
+}

@@ -1,0 +1,48 @@
+.post-card {
+  $excerpt-width: 555px;
+  padding: space('xxl');
+
+  &__media {
+    margin-bottom: space('xxl');
+  }
+
+  &__meta {
+    @extend %flex-center-y;
+    @include heading(fs('xxs'), fw('medium'), lh('lg'));
+    margin-bottom: space('base');
+  }
+
+  &__author {
+    position: relative;
+    padding-right: space('xs');
+    @extend %divider-line;
+
+    span {
+      color: color('accent-purple');
+    }
+  }
+
+  &__title {
+    margin-bottom: space('base');
+  }
+
+  &__excerpt {
+    color: color('secondary-text-color');
+    max-width: $excerpt-width;
+    margin-bottom: space('xxl');
+  }
+}
+
+
+.post-card--featured { @include border(); }
+
+.post-card--compact {
+  .post-card__title {
+    @include heading(fs('md'), fw('bold'), lh('md'));
+    max-width: 370px;
+    margin-bottom: space('sm');
+  }
+}
+
+.post-card--highlight { background-color: color('accent-light-yellow-color'); }
+
