@@ -13,9 +13,9 @@ $btn-base-styles: (
         ),
         'ghost': (
                 bg: transparent,
-                fg: color('primary-text-color'),
-                hover-bg: color('lavander-color'),
-                border: color('primary-text-color')
+                fg: color('accent-purple'),
+                hover-bg: color('light-grey-color'),
+                border: none
         )
 );
 
