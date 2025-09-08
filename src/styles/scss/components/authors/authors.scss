@@ -1,0 +1,13 @@
+.authors {
+
+  &__title {
+    text-align: center;
+    margin-bottom: space('4xl');
+  }
+
+  &__list {
+    @extend %flex-center-both;
+    gap: space('xxl');
+  }
+}
+

@@ -1,0 +1,22 @@
+.category-card {
+  display: block;
+  height: 100%;
+
+  &__icon {
+    display: inline-flex;
+    background-color: color('accent-light-yellow-color');
+    padding: space('md');
+    border-radius: 10px;
+  }
+
+
+  &__title {
+    color: color('primary-text-color');
+    margin-top: space('base');
+  }
+
+  &__description {
+    color: color('secondary-text-color');
+    margin-top: space( 'xs');
+  }
+}

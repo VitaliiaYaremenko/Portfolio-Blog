@@ -1,0 +1,59 @@
+.author-card {
+  $author-card-max-height: 295px;
+
+  background-color: color('light-grey-color');
+  padding: space(40px) space(28px);
+  max-height: $author-card-max-height;
+  overflow: hidden;
+
+  &--featured {
+    background-color: color('accent-light-yellow-color');
+  }
+
+  &__picture {
+    @extend %flex-center-both;
+    margin-bottom: space('lg');
+  }
+
+  &__name {
+    text-align: center;
+
+    a {
+      color: color('primary-text-color');
+      transition: color 0.2s ease;
+
+      &:hover,
+      &:focus-visible {
+        color: color('accent-purple');
+        outline: none;
+      }
+    }
+  }
+
+  &__description {
+    color: color('secondary-text-color');
+    margin-bottom: space('lg');
+  }
+
+  &__social {
+    @extend %flex-center-both;
+    gap: space('base');
+  }
+
+  &__link  {
+
+    i {
+      color: color('primary-text-color');
+      transition: color 0.2s ease;
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+
+      i {
+        color: color('accent-purple');
+      }
+    }
+  }
+}

@@ -18,6 +18,12 @@
   align-items: center;
 }
 
+.author-card__social, .author-card__picture, .authors__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .post-card__author::after, .banner__speaker::after {
   content: "";
   display: inline-block;
@@ -459,6 +465,55 @@ img {
 .category-card__description {
   color: #6D6E76;
   margin-top: 5px;
+}
+
+.authors__title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.authors__list {
+  gap: 32px;
+}
+
+.author-card {
+  background-color: #F4F4F4;
+  padding: 40px 28px;
+  max-height: 295px;
+  overflow: hidden;
+}
+.author-card--featured {
+  background-color: #FBF6EA;
+}
+.author-card__picture {
+  margin-bottom: 20px;
+}
+.author-card__name {
+  text-align: center;
+}
+.author-card__name a {
+  color: #232536;
+  transition: color 0.2s ease;
+}
+.author-card__name a:hover, .author-card__name a:focus-visible {
+  color: #592EA9;
+  outline: none;
+}
+.author-card__description {
+  color: #6D6E76;
+  margin-bottom: 20px;
+}
+.author-card__social {
+  gap: 16px;
+}
+.author-card__link i {
+  color: #232536;
+  transition: color 0.2s ease;
+}
+.author-card__link:hover, .author-card__link:focus-visible {
+  outline: none;
+}
+.author-card__link:hover i, .author-card__link:focus-visible i {
+  color: #592EA9;
 }
 
 .join__content {
