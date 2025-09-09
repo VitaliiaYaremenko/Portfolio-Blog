@@ -467,6 +467,38 @@ img {
   margin-top: 5px;
 }
 
+.story__layout {
+  position: relative;
+}
+.story__picture img {
+  display: block;
+  height: auto;
+}
+.story__content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 600px;
+  background: #FFFFFF;
+  padding: 50px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+.story__subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.19em;
+  margin-bottom: 24px;
+}
+.story__title {
+  max-width: 548px;
+  margin-bottom: 16px;
+}
+.story__description {
+  color: #6D6E76;
+  margin-bottom: 32px;
+}
+
 .authors__title {
   text-align: center;
   margin-bottom: 48px;
