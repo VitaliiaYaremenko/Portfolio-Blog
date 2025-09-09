@@ -1,0 +1,39 @@
+.story {
+
+  $story-content-width: 600px;
+  $story-title-width:548px;
+
+  &__layout {
+    position: relative;
+  }
+
+  &__picture img {
+    display: block;
+    height: auto;
+  }
+
+  &__content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: $story-content-width;
+    background: color('basic-white-color');
+    padding: space('5xl');
+    box-shadow: 0 4px 24px rgba(0,0,0,.08);
+  }
+
+  &__subtitle {
+    @include heading(fs('xs'), fw('semi-bold'), lh( 'sm'), 0.19em);
+    margin-bottom: space('xl');
+  }
+
+  &__title {
+    max-width: $story-title-width;
+    margin-bottom: space('base');
+  }
+
+  &__description {
+    color: color('secondary-text-color');
+    margin-bottom: space('xxl');
+  }
+}
