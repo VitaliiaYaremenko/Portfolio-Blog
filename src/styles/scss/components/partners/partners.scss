@@ -1,0 +1,33 @@
+.partners {
+
+  &__layout {
+    @extend %flex-center-y;
+    gap: space(85px);
+  }
+
+  &__intro {
+    color: color('secondary-text-color');
+  }
+
+  &__subtitle {
+    font-size: fs( 'xxs');
+    line-height: lh('lg');
+  }
+
+  &__title {
+    @include heading(fs('md'), fw('bold'), lh('md'));
+  }
+
+  &__list {
+    @extend %flex-center-y;
+    gap: space('3xl-alt');
+  }
+
+  &__item {
+    font-size: fs('sm');
+    font-weight: fw('extra-bold');
+    color: color('secondary-text-color');
+    @extend %flex-center-y;
+    gap: space(10px);
+  }
+}
