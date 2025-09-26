@@ -27,6 +27,16 @@
 
   &__body {
     flex: 1 1 60%;
+    position: relative;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-rows: 1fr;
+  }
+
+  &__item {
+
   }
 
   &__text {
@@ -38,6 +48,9 @@
   }
 
   &__controls {
+    position: absolute;
+    bottom: space(10px);
+    right: 0;
     @extend %flex-center-y;
     gap: space('xl');
   }

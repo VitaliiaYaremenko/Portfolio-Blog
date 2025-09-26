@@ -597,11 +597,19 @@ img {
 }
 .testimonials__body {
   flex: 1 1 60%;
+  position: relative;
+}
+.testimonials__list {
+  display: grid;
+  grid-auto-rows: 1fr;
 }
 .testimonials__text {
   margin-bottom: 110px;
 }
 .testimonials__controls {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
   gap: 24px;
 }
 .testimonials__button {
