@@ -1,10 +1,12 @@
 .testimonials {
 
+  $testimonials-btn-sizes: fs('xl');
+
   &__layout {
-    background-color: color('accent-light-yellow-color');
-    padding: space(75px) space(110px);
     @extend %flex-between;
     gap: space(96px);
+    background-color: color('accent-light-yellow-color');
+    padding: space(75px) space(110px);
   }
 
   &__header {
@@ -26,20 +28,21 @@
   }
 
   &__body {
-    flex: 1 1 60%;
     position: relative;
-  }
-
-  &__list {
-    display: grid;
-    grid-auto-rows: 1fr;
+    flex: 1 1 60%;
   }
 
   &__item {
+    display: none;
 
+    &--active {
+      display: block;
+    }
   }
 
   &__text {
+    height: 170px;
+    overflow: auto;
     margin-bottom: space(110px);
   }
 
@@ -56,17 +59,14 @@
   }
 
   &__button {
-    width: 48px;
-    height: 48px;
+    width: $testimonials-btn-sizes;
+    height: $testimonials-btn-sizes;
     border: none;
     border-radius: 50%;
     box-sizing: border-box;
-
     will-change: transform;
-
     background-color: color('basic-white-color');
     color: color('text-color');
-
 
     transition:
             transform .2s ease,
@@ -88,24 +88,21 @@
       transform: scale(1.02);
     }
   }
-
-
 }
 
 .testimonial-author {
+  $author-picture-sizes: fs('xl');
+
   @extend %flex-center-y;
   gap: space('base');
+
+  &__avatar {
+    width: $author-picture-sizes;
+    height: $author-picture-sizes;
+  }
 
   &__location {
     color: color('secondary-text-color');
   }
 }
 
-.testimonials__item {
-  display: none;
-}
-.testimonials__item {
-  &--active {
-    display: block;
-  }
-}
