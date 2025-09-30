@@ -1,5 +1,15 @@
 @use "sass:map";
 
+@mixin media($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (max-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @warn "Нет брейкпоинта с названием #{$size}";
+  }
+}
+
 @mixin btn-style($bg, $fg, $hover-bg: null, $border: $bg) {
   background-color: $bg;
   color: $fg;

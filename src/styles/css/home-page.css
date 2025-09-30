@@ -18,10 +18,15 @@
   align-items: center;
 }
 
-.author-card__social, .author-card__picture, .authors__list {
+.modal__controls, .backdrop, .author-card__social, .author-card__picture, .authors__list {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.modal__nav .nav__list {
+  display: flex;
+  flex-direction: column;
 }
 
 .post-card__author::after, .banner__speaker::after {
@@ -194,6 +199,10 @@ body {
   line-height: 1.75;
 }
 
+body.is-locked {
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -270,6 +279,11 @@ img {
   gap: 32px;
 }
 
+@media (max-width: 768px) {
+  .header__navigations {
+    display: none;
+  }
+}
 .nav__list {
   gap: 24px;
 }
@@ -284,6 +298,56 @@ img {
   border-bottom-color: #FFFFFF;
 }
 
+.burger-box {
+  width: 30px;
+  height: 24px;
+  display: none;
+  cursor: pointer;
+  position: relative;
+}
+.burger-box span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #E5E5E5;
+  transform: translateY(-50%);
+  transition: opacity 0.3s;
+}
+.burger-box::before, .burger-box::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #E5E5E5;
+  transition: transform 0.3s, top 0.3s, bottom 0.3s, opacity 0.3s;
+  transform-origin: 50% 50%;
+}
+.burger-box::before {
+  top: 0;
+}
+.burger-box::after {
+  bottom: 0;
+}
+.burger-box:hover span {
+  opacity: 0;
+}
+.burger-box:hover::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.burger-box:hover::after {
+  bottom: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .burger-box {
+    display: block;
+  }
+}
 .banner {
   padding: 128px 0;
   background-image: radial-gradient(80.99% 71.93% at 74.58% 0%, rgba(0, 0, 0, 0) 0%, rgba(4, 4, 4, 0.5098039216) 100%), url("./../../assets/images/banner/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook.jpg");
@@ -743,6 +807,58 @@ img {
 }
 .footer__social-link i:hover, .footer__social-link i:focus-visible {
   color: #FFFFFF;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(28, 28, 28, 0.5);
+  inset: 0;
+  z-index: 1000;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #dcceae;
+  padding: 50px 32px;
+  border-radius: 32px;
+  width: 550px;
+  max-width: 80vw;
+}
+.modal__content {
+  position: relative;
+}
+.modal__btn-close {
+  position: absolute;
+  top: -25px;
+  right: 0;
+}
+.modal__btn-close i {
+  font-size: 36px;
+}
+.modal__nav {
+  margin-bottom: 50px;
+}
+.modal__nav .nav__item {
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal__nav .nav__item a {
+  color: #232536;
+}
+.modal__nav .nav__item a:hover {
+  border-bottom: 2px solid #232536;
 }
 
 /*# sourceMappingURL=home-page.css.map */

@@ -12,6 +12,7 @@ $colors: (
         'yellow-color': #FFD050,
         'accent-light-yellow-color': #FBF6EA,
         'yellow-hover-btn': #c7a445,
+        'modal-bg':#dcceae,
         'accent-purple': #592EA9,
         'lavander-color': #F4F0F8,
         'dark-gray-color': #4C4C4C,
@@ -64,27 +65,14 @@ $spacings: (
         'custom-18': 18px
 );
 
-
-
 $breakpoints: (
-        'xxl': 1440px,
-        'xl': 1280px,
-        'lg': 1024px,
-        'md': 768px,
-        'sm': 480px,
-        'xs': 320px,
+        xs: 320px,
+        sm: 375px,
+        md: 414px,
+        lg: 600px,
+        xl: 768px,
+        xxl: 834px,
+        xxxl: 1024px,
+        hd: 1280px
 );
 
-$containers: (
-        'xl': 805px,
-        'lg': 730px,
-        'md-xl': 700px,
-        'md': 595px,
-        'sm-xl': 562px,
-        'sm-lg': 555px,
-        'sm-md': 548px,
-        'sm': 485px,
-        'xs-lg': 470px,
-        'xs-md': 465px,
-        'xs': 350px,
-);

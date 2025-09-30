@@ -1,0 +1,69 @@
+.backdrop {
+  position: fixed;
+  @extend %flex-center-both;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(28, 28, 28, 0.5);
+  inset: 0;
+  z-index: 1000;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: color( 'modal-bg');
+  padding: space('5xl') space( 'xxl');
+  border-radius: space('xxl');
+  width: 550px;
+  max-width: 80vw;
+
+  &__content {
+    position: relative;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: -25px;
+    right: 0;
+
+    i {
+      font-size: fs('lg');
+    }
+  }
+
+  &__nav {
+    margin-bottom: space('5xl');
+    .nav {
+      &__list {
+        @extend %flex-column;
+      }
+
+      &__item {
+        font-size: fs('sm');
+        font-weight: fw('bold');
+
+       a {
+         color: color('primary-text-color');
+         &:hover {
+           border-bottom: 2px solid color('primary-text-color');
+         }
+       }
+      }
+    }
+  }
+
+  &__controls {
+    @extend %flex-center-both;
+  }
+}

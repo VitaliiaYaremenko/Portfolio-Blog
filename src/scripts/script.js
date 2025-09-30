@@ -30,4 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   prevBtn.addEventListener('click', () => showSlide(currentSlideIndex - 1));
   nextBtn.addEventListener('click', () => showSlide(currentSlideIndex + 1));
+
+  const burger = document.getElementById('burger');
+  const backdrop = document.getElementById('menu-backdrop');
+  const closeBtn = document.querySelector('#menu-modal .modal__btn-close');
+
+  const openModal = function () {
+    backdrop.classList.remove('is-hidden');
+    document.body.classList.add('is-locked');
+  };
+
+  const closeModal = function () {
+    backdrop.classList.add('is-hidden');
+    document.body.classList.remove('is-locked');
+  };
+
+  burger.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
 });
