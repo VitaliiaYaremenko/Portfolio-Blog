@@ -9,13 +9,17 @@ body {
   line-height: lh('xl');
 }
 
+body.is-locked {
+  overflow: hidden;
+}
+
 .container, {
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .container {
-  max-width: breakpoints('xl');
+  max-width: breakpoints('hd');
 }
 
 a {

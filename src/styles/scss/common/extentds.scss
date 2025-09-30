@@ -42,6 +42,7 @@
   color: color(primary-text-color);
   line-height: lh(xl);
 }
+
 %divider-line {
   &::after {
     content: "";

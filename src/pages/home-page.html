@@ -21,7 +21,7 @@
             </a>
           </div>
           <div class="header__navigations">
-            <nav class="nav">
+            <nav class="nav header__nav">
               <ul class="nav__list">
                 <li class="nav__item">
                   <a class="nav__link" href="#">Home</a>
@@ -40,6 +40,9 @@
             <div class="header__action">
               <button class="btn btn--secondary btn--md">Subscribe</button>
             </div>
+          </div>
+          <div class="burger-box" id="burger">
+            <span></span>
           </div>
         </div>
       </div>
@@ -96,7 +99,6 @@
                 </div>
               </article>
             </div>
-
             <div class="recent-posts">
               <div class="recent-posts__controls">
                 <h2 class="recent-posts__title title--xl">All Posts</h2>
@@ -158,7 +160,6 @@
                 </p>
                 <a class="btn btn--ghost about-us__btn" href="#">Read More ></a>
               </div>
-
               <div class="about-mission">
                 <h3 class="about-mission__subtitle text-uppercase">our mission</h3>
                 <h2 class="about-mission__title title--md">
@@ -599,6 +600,34 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" id="menu-backdrop">
+      <div class="modal" id="menu-modal">
+        <div class="modal__content">
+          <button type="button" class="btn modal__btn-close">
+            <i class="bi bi-x" aria-hidden="true"></i>
+          </button>
+          <nav class="nav modal__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">About Us</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="modal__controls">
+            <button class="btn btn--secondary btn--md">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./../scripts/script.js"></script>
   </body>
