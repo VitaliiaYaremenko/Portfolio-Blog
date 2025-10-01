@@ -1,0 +1,11 @@
+@include media(1150px) {
+  .categories__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media('lg') {
+  .categories__list {
+    grid-template-columns: 1fr;
+  }
+}
