@@ -391,8 +391,14 @@ img {
   gap: 32px;
 }
 
+@media (max-width: 768px) {
+  .posts__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .featured-post {
-  flex: 1 1 50%;
+  flex: 1 1 70%;
 }
 .featured-post__title {
   margin-bottom: 32px;
@@ -417,6 +423,10 @@ img {
 }
 .post-card__media {
   margin-bottom: 32px;
+}
+.post-card__media img {
+  max-width: 100%;
+  height: auto;
 }
 .post-card__meta {
   font-size: 14px;
@@ -456,6 +466,14 @@ img {
   background-color: #FBF6EA;
 }
 
+@media (max-width: 1150px) {
+  .post-card__title {
+    font-size: 24px;
+  }
+  .post-card--compact .post-card__title {
+    font-size: 18px;
+  }
+}
 .about__wrapper {
   padding-top: 23px;
   position: relative;
