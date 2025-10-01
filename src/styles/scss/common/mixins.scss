@@ -5,8 +5,18 @@
     @media (max-width: map-get($breakpoints, $size)) {
       @content;
     }
+
+  } @else if type-of($size) == number {
+    @if unit($size) == "" {
+      @warn "media(): числу `#{$size}` нужны единицы (px|em|rem...).";
+    } @else {
+      @media (max-width: $size) {
+        @content;
+      }
+    }
+
   } @else {
-    @warn "Нет брейкпоинта с названием #{$size}";
+    @warn "media(): нет брейкпоинта `#{$size}` и это не число.";
   }
 }
 

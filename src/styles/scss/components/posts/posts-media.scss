@@ -1,0 +1,6 @@
+@include media('xl') {
+  .posts__content {
+    display: flex;
+    flex-direction: column;
+  }
+}

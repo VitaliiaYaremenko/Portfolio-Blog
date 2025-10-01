@@ -3,6 +3,10 @@
   padding: space('xxl');
 
   &__media {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
     margin-bottom: space('xxl');
   }
 

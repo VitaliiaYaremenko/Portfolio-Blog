@@ -1,0 +1,12 @@
+@include media(1150px) {
+
+  .post-card__title {
+    font-size: fs('md');
+  }
+
+  .post-card--compact {
+    .post-card__title {
+      font-size: fs('sm');
+    }
+  }
+}
