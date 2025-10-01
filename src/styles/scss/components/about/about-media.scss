@@ -1,0 +1,14 @@
+@include media('xxxl') {
+  .about-us__title,
+  .about-mission__title{
+    font-size: fs('md');
+  }
+}
+
+
+@include media('xxl') {
+  .about__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
