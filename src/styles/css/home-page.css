@@ -382,6 +382,11 @@ img {
   margin-bottom: 48px;
 }
 
+@media (max-width: 600px) {
+  .banner__title {
+    font-size: 36px;
+  }
+}
 .posts__content {
   gap: 32px;
 }
