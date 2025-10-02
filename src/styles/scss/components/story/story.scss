@@ -17,6 +17,7 @@
     right: 0;
     bottom: 0;
     max-width: $story-content-width;
+    min-width: 250px;
     background: color('basic-white-color');
     padding: space('5xl');
     box-shadow: 0 4px 24px rgba(0,0,0,.08);

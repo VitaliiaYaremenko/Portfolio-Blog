@@ -1,0 +1,27 @@
+@include media('xxxl') {
+  .story__content {
+    max-width: 450px;
+  }
+  .story__title {
+    font-size: fs('semi-lg');
+  }
+}
+
+@include media(985px) {
+  .story__picture {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include media(580px) {
+
+  .story__picture {
+    display: none;
+  }
+
+  .story__content {
+    position: static;
+  }
+}
