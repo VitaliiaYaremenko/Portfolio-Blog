@@ -865,6 +865,11 @@ img {
   margin-bottom: 32px;
 }
 
+@media (max-width: 600px) {
+  .join__title {
+    font-size: 28px;
+  }
+}
 .footer {
   background-color: #232536;
   padding: 55px 80px;
