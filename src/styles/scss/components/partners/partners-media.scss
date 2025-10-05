@@ -1,0 +1,14 @@
+@include media(1150px) {
+  .partners__layout {
+    flex-direction: column;
+  }
+  .partners__subtitle {
+    text-align: center;
+  }
+}
+
+@include media('xxl') {
+  .partners__list {
+    flex-direction: column;
+  }
+}

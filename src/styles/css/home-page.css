@@ -729,6 +729,19 @@ img {
   gap: 10px;
 }
 
+@media (max-width: 1150px) {
+  .partners__layout {
+    flex-direction: column;
+  }
+  .partners__subtitle {
+    text-align: center;
+  }
+}
+@media (max-width: 834px) {
+  .partners__list {
+    flex-direction: column;
+  }
+}
 .testimonials__layout {
   gap: 96px;
   background-color: #FBF6EA;
