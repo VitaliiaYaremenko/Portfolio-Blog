@@ -619,23 +619,35 @@ img {
 
 @media (max-width: 1024px) {
   .story__content {
-    max-width: 450px;
+    max-width: 540px;
   }
   .story__title {
     font-size: 28px;
   }
 }
 @media (max-width: 985px) {
+  .story__content {
+    padding: 32px 32px;
+  }
   .story__picture img {
     width: 100%;
   }
 }
-@media (max-width: 580px) {
-  .story__picture {
-    display: none;
+@media (max-width: 725px) {
+  .story__content {
+    opacity: 0.9;
   }
+}
+@media (max-width: 580px) {
   .story__content {
     position: static;
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .story__content {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 .authors__title {

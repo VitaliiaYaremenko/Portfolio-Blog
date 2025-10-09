@@ -1,6 +1,6 @@
 @include media('xxxl') {
   .story__content {
-    max-width: 450px;
+    max-width: 540px;
   }
   .story__title {
     font-size: fs('semi-lg');
@@ -8,6 +8,9 @@
 }
 
 @include media(985px) {
+  .story__content {
+    padding: space('xxl') space('xxl');
+  }
   .story__picture {
     img {
       width: 100%;
@@ -15,13 +18,22 @@
   }
 }
 
-@include media(580px) {
-
-  .story__picture {
-    display: none;
+@include media(725px) {
+  .story__content {
+    opacity: 0.9;
   }
+}
 
+@include media(580px) {
   .story__content {
     position: static;
+    text-align: center;
+  }
+}
+
+@include media('xs') {
+  .story__content {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
