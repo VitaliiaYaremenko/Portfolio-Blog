@@ -360,6 +360,23 @@ img {
   margin-bottom: 32px;
 }
 
+@media (max-width: 768px) {
+  .policy-content__title {
+    text-align: center;
+  }
+  .policy-content__subtitle {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .policy-header__title {
+    font-size: 28px;
+  }
+  .policy-content__title {
+    font-size: 24px;
+  }
+}
 .footer {
   background-color: #232536;
   padding: 55px 80px;
