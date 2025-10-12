@@ -1,0 +1,19 @@
+@include media('xl') {
+  .policy-content__title {
+    text-align: center;
+  }
+  .policy-content__subtitle {
+    font-size: fs('semi-lg');
+    text-align: center;
+  }
+}
+
+@include media('sm') {
+  .policy-header__title {
+    font-size: fs('semi-lg');
+  }
+
+  .policy-content__title {
+    font-size: fs('md');
+  }
+}
