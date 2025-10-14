@@ -1,0 +1,73 @@
+.contact {
+  &__content {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__subtitle {
+   @include heading(fs('xs'), fw('extra-bold'), lh('sm'), 0.19em);
+    margin-bottom: space('md');
+  }
+
+  &__title {
+    margin-bottom: space('xl');
+  }
+
+  &__description {
+    color: color('secondary-text-color');
+    margin-bottom: space('6xl');
+  }
+
+  &__panel {
+    padding: space('4xl') space('6xl');
+    background-color: color('accent-purple');
+    color: color('basic-white-color');
+    @extend %flex;
+    align-items: flex-start;
+    gap: space('3xl');
+  }
+
+}
+
+.info-card {
+  flex: 1 1 50%;
+
+  &__title {
+    font-size: fs('xxs');
+    line-height: lh('lg');
+    opacity: 0.6;
+    padding-bottom: 10px;
+    border-bottom: 1px solid color('border-color');
+  }
+
+  &__list {
+    margin-top: space('base');
+  }
+
+  &__label,
+  &__value {
+    display: block;
+  }
+
+  &__label,
+  &__value,
+  &__phone {
+    @include heading(fs('md'), fw('bold'), lh('xl'));
+  }
+
+  &__note,
+  &__maile{
+    opacity: 0.6;
+  }
+
+  &__phone,
+  &__maile {
+    color: color('basic-white-color');
+  }
+
+
+}

@@ -1,0 +1,44 @@
+.form {
+  @extend %flex-column;
+  gap: space('base');
+  margin-top: space(35px);
+
+
+  &__input,
+  textarea,
+  select {
+    padding: 24px;
+    border-radius: 4px;
+    resize: none;
+    @include border();
+    @include input-states();
+
+  }
+
+  &__input,
+  textarea, {
+    &::placeholder {
+      color: color('primary-text-color');
+      font-family: "Sen", sans-serif;
+      font-size: fs('xs');
+    }
+  }
+
+
+
+  &__select {
+    color: color('primary-text-color');
+    font-family: "Sen", sans-serif;
+    font-size: fs('xs');
+
+    appearance: none; // Chrome, Safari
+    -moz-appearance: none; // Firefox
+    -webkit-appearance: none;
+    background-image: url($base-assets-path + 'images/icons/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 12px;
+  }
+}
+
+

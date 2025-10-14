@@ -101,3 +101,27 @@
   border-radius: $radius;
 }
 
+@mixin input-states(
+  $border-color-hover: color('accent-purple'),
+  $border-color-focus: color('yellow-color'),
+  $border-color-disabled: color('border-color'),
+  $shadow-focus: 0 0 0 3px rgba(255, 208, 80, 0.35)
+) {
+
+  &:hover {
+    border-color: $border-color-hover;
+  }
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border-color: $border-color-focus;
+    box-shadow: $shadow-focus;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: color('light-grey-color');
+    border-color: $border-color-disabled;
+  }
+}
