@@ -395,6 +395,25 @@ img {
   color: #FFFFFF;
 }
 
+@media (max-width: 615px) {
+  .contact__panel {
+    padding: 32px 32px;
+  }
+  .info-card__label,
+  .info-card__value,
+  .info-card__phone {
+    font-size: 18px;
+  }
+}
+@media (max-width: 452px) {
+  .contact__panel {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-card {
+    width: 100%;
+  }
+}
 .form {
   gap: 16px;
   margin-top: 35px;

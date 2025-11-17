@@ -1,0 +1,21 @@
+@include media(615px) {
+  .contact__panel {
+    padding: 32px 32px;
+  }
+  .info-card__label,
+  .info-card__value,
+  .info-card__phone {
+    font-size: 18px;
+  }
+}
+
+@include media(452px) {
+  .contact__panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-card {
+    width: 100%;
+  }
+}
