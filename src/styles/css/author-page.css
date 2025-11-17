@@ -1,4 +1,4 @@
-.author-hero__content {
+.author-posts__content, .author-hero__content {
   display: flex;
 }
 
@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.footer__social-list, .footer__subscribe-form, .author-hero__social, .nav__list, .header__navigations {
+.footer__social-list, .footer__subscribe-form, .author-post__card, .author-hero__social, .nav__list, .header__navigations {
   display: flex;
   align-items: center;
 }
@@ -381,6 +381,32 @@ img {
 }
 .author-hero__social {
   gap: 16px;
+}
+
+.author-posts__content {
+  flex-direction: column;
+  gap: 64px;
+}
+
+.author-post__card {
+  gap: 32px;
+}
+.author-post__body {
+  max-width: 560px;
+}
+.author-post__category {
+  color: #592EA9;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.19em;
+  margin-bottom: 20px;
+}
+.author-post__subtitle {
+  margin-bottom: 16px;
+}
+.author-post__description {
+  color: #6D6E76;
 }
 
 .footer {
