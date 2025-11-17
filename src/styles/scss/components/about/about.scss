@@ -9,9 +9,9 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 100%;          // на всю ширину секции
-      max-width: 1060px;    // ограничь если нужно
-      height: 23px;         // высота полоски
+      width: 100%;
+      max-width: 1060px;
+      height: 23px;
       background: url($base-assets-path + 'images/icons/pattern.svg') no-repeat center / cover;
       z-index: 1;
     }
