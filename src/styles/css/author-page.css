@@ -383,6 +383,22 @@ img {
   gap: 16px;
 }
 
+@media (max-width: 768px) {
+  .author-hero__title {
+    font-size: 28px;
+  }
+  .author-hero__content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .author-hero__body {
+    text-align: center;
+  }
+  .author-hero__social {
+    justify-content: center;
+  }
+}
 .author-posts__content {
   flex-direction: column;
   gap: 64px;
@@ -409,6 +425,34 @@ img {
   color: #6D6E76;
 }
 
+@media (max-width: 834px) {
+  .author-post__picture img {
+    width: 350px;
+    height: 250px;
+  }
+  .author-post__subtitle {
+    font-size: 24px;
+  }
+}
+@media (max-width: 650px) {
+  .author-posts__content {
+    gap: 32px;
+  }
+  .author-posts__title {
+    text-align: center;
+  }
+  .author-post__card {
+    flex-direction: column;
+  }
+  .author-post__body {
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .author-posts__title {
+    font-size: 36px;
+  }
+}
 .footer {
   background-color: #232536;
   padding: 55px 80px;

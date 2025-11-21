@@ -1,0 +1,39 @@
+@include media('xxl') {
+  .author-post__picture {
+    img {
+      width: 350px;
+      height: 250px;
+    }
+  }
+
+  .author-post__subtitle {
+    font-size: fs('md');
+  }
+}
+
+@include media(650px) {
+
+  .author-posts__content {
+    gap: space( 'xxl');
+  }
+
+  .author-posts__title {
+    text-align: center;
+  }
+
+  .author-post__card {
+    flex-direction: column;
+  }
+
+  .author-post__body {
+    text-align: center;
+  }
+}
+
+@include media('sm') {
+  .author-posts__title {
+    font-size: fs( 'lg');
+  }
+
+
+}
