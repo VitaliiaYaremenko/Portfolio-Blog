@@ -1,0 +1,20 @@
+@include media('xl') {
+  .author-hero__title {
+    font-size: fs('semi-lg');
+  }
+
+  .author-hero__content {
+    @extend %flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .author-hero__body {
+    text-align: center;
+  }
+
+  .author-hero__social {
+    justify-content: center;
+  }
+}
