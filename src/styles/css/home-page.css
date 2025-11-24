@@ -700,6 +700,12 @@ img {
 .author-card__social {
   gap: 16px;
 }
+.author-card__social a i {
+  color: #232536;
+}
+.author-card__social a i:hover {
+  color: #7c7676;
+}
 
 @media (max-width: 1180px) {
   .author-card__description {
@@ -795,6 +801,7 @@ img {
   box-sizing: border-box;
   will-change: transform;
   background-color: #FFFFFF;
+  color: #6D6E76;
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 .testimonials__button i {
@@ -943,15 +950,11 @@ img {
 .footer__social-list {
   gap: 26px;
 }
-.footer__social-list i {
-  width: 16px;
-  height: 16px;
-}
-.footer__social-link i {
+.footer__social-list a i {
   color: #6D6E76;
   transition: color 0.3s;
 }
-.footer__social-link i:hover, .footer__social-link i:focus-visible {
+.footer__social-list a i:hover, .footer__social-list a i:focus-visible {
   color: #FFFFFF;
 }
 

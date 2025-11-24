@@ -38,5 +38,15 @@
   &__social {
     @extend %flex-center-both;
     gap: space('base');
+
+    a {
+      i {
+        color: color('primary-text-color');
+
+        &:hover {
+          color: color('shadow-color');
+        }
+      }
+    }
   }
 }
