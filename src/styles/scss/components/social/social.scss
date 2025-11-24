@@ -4,14 +4,5 @@
       color: color('primary-text-color');
       transition: color 0.2s ease;
     }
-
-    &:hover,
-    &:focus-visible {
-      outline: none;
-
-      i {
-        color: color('accent-purple');
-      }
-    }
   }
 }
