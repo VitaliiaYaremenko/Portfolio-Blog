@@ -1,0 +1,17 @@
+.breadcrumbs {
+
+  @extend %flex-center-both;
+  gap: space('sm');
+
+  &__link {
+    color: color('primary-text-color');
+  }
+
+  &__link,
+  &__current,
+  &__separator {
+    font-weight: fw('medium');
+    letter-spacing: 0.19em;;
+  }
+
+}

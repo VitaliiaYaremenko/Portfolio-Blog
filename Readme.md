@@ -5,3 +5,5 @@ sass --watch ./src/styles/scss/privacy-policy-page.scss:./src/styles/css/privacy
 sass --watch ./src/styles/scss/contact-page.scss:./src/styles/css/contact-page.css
 
 sass --watch ./src/styles/scss/author-page.scss:./src/styles/css/author-page.css
+
+sass --watch ./src/styles/scss/category-page.scss:./src/styles/css/category-page.css
