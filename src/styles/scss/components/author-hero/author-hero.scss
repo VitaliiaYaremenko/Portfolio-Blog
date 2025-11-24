@@ -17,6 +17,13 @@
     z-index: 1;
   }
 
+  &__avatar {
+
+    img {
+      border-radius: 25px;
+    }
+  }
+
   &__content {
     @extend %flex;
     gap: space('xxl');
@@ -38,5 +45,13 @@
   &__social {
     @extend %flex-center-y;
     gap: space('base');
+
+    a {
+      i {
+        &:hover {
+          color: color('border-color');
+        }
+      }
+    }
   }
 }

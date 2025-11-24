@@ -342,12 +342,6 @@ img {
   color: #232536;
   transition: color 0.2s ease;
 }
-.social__link:hover, .social__link:focus-visible {
-  outline: none;
-}
-.social__link:hover i, .social__link:focus-visible i {
-  color: #592EA9;
-}
 
 .author-hero {
   padding: 128px 0;
@@ -366,6 +360,9 @@ img {
   height: 23px;
   z-index: 1;
 }
+.author-hero__avatar img {
+  border-radius: 25px;
+}
 .author-hero__content {
   gap: 32px;
 }
@@ -381,6 +378,9 @@ img {
 }
 .author-hero__social {
   gap: 16px;
+}
+.author-hero__social a i:hover {
+  color: #afb0b7;
 }
 
 @media (max-width: 768px) {
