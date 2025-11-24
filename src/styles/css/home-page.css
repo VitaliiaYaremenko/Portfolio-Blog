@@ -700,16 +700,6 @@ img {
 .author-card__social {
   gap: 16px;
 }
-.author-card__link i {
-  color: #232536;
-  transition: color 0.2s ease;
-}
-.author-card__link:hover, .author-card__link:focus-visible {
-  outline: none;
-}
-.author-card__link:hover i, .author-card__link:focus-visible i {
-  color: #592EA9;
-}
 
 @media (max-width: 1180px) {
   .author-card__description {
