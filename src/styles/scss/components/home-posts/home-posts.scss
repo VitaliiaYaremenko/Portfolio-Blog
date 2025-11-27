@@ -1,0 +1,35 @@
+.home-posts {
+  &__layout {
+    @extend %flex-between;
+    gap: space('xxl');
+  }
+
+  &__featured {
+    flex: 1 1 70%;
+  }
+
+  &__title {
+    margin-bottom: space('xxl');
+  }
+
+  &__recent {
+    flex: 1 1 50%;
+  }
+
+  &__recent-header {
+    margin-bottom: space('xxl');
+  }
+
+  &__recent-title {
+    margin-bottom: 0;
+  }
+
+  &__recent-header {
+    @extend %flex-between-center;
+  }
+
+  &__link {
+    @include link-style(color('accent-purple'));
+  }
+}
+

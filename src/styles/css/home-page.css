@@ -1,13 +1,14 @@
+@charset "UTF-8";
 .about__content {
   display: flex;
 }
 
-.footer__list, .testimonials__layout, .posts__content {
+.footer__list, .testimonials__layout, .home-posts__layout {
   display: flex;
   justify-content: space-between;
 }
 
-.footer__bottom, .footer__subscribe, .footer__top, .testimonials__footer, .recent-posts__controls, .header__content {
+.footer__bottom, .footer__subscribe, .footer__top, .testimonials__footer, .home-posts__recent-header, .header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -387,37 +388,52 @@ img {
     font-size: 36px;
   }
 }
-.posts__content {
+.home-posts__layout {
   gap: 32px;
 }
-
-@media (max-width: 768px) {
-  .posts__content {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.featured-post {
+.home-posts__featured {
   flex: 1 1 70%;
 }
-.featured-post__title {
+.home-posts__title {
   margin-bottom: 32px;
 }
-
-.recent-posts {
+.home-posts__recent {
   flex: 1 1 50%;
 }
-.recent-posts__link {
+.home-posts__recent-header {
+  margin-bottom: 32px;
+}
+.home-posts__recent-title {
+  margin-bottom: 0;
+}
+.home-posts__link {
   color: #592EA9;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
   transition: border-color 0.4s ease;
 }
-.recent-posts__link:hover, .recent-posts__link:focus-visible {
+.home-posts__link:hover, .home-posts__link:focus-visible {
   outline: none;
   border-bottom-color: #592EA9;
 }
 
+@media (max-width: 768px) {
+  .home-posts__layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-posts__recent {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 375px) {
+  .home-posts__recent {
+    padding: 0;
+  }
+  .home-posts__recent-title {
+    font-size: 24px;
+  }
+}
 .post-card {
   padding: 32px;
 }
@@ -427,6 +443,7 @@ img {
 .post-card__media img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 .post-card__meta {
   font-size: 14px;
@@ -450,10 +467,15 @@ img {
   margin-bottom: 32px;
 }
 
+/* большая карточка с рамкой (Home – Featured Post) */
 .post-card--featured {
   border: 1px solid #afb0b7;
 }
 
+/* компактная, без картинки (список справа на Home) */
+.post-card--compact {
+  padding: 25px 32px;
+}
 .post-card--compact .post-card__title {
   font-size: 24px;
   font-weight: 700;
@@ -461,9 +483,27 @@ img {
   max-width: 370px;
   margin-bottom: 8px;
 }
+.post-card--compact .post-card__media {
+  margin-bottom: 0;
+}
 
+/* подсвеченная карточка */
 .post-card--highlight {
   background-color: #FBF6EA;
+}
+
+/* горизонтальная карточка: картинка слева, текст справа (Blog, Category, Author) */
+.post-card--horizontal {
+  display: flex;
+  gap: 24px;
+  padding: 0;
+}
+.post-card--horizontal .post-card__media {
+  flex: 0 0 280px;
+  margin-bottom: 0;
+}
+.post-card--horizontal .post-card__body {
+  flex: 1 1 auto;
 }
 
 @media (max-width: 1150px) {
