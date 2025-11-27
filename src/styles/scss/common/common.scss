@@ -13,13 +13,18 @@ body.is-locked {
   overflow: hidden;
 }
 
-.container, {
+.container,
+.container-md {
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .container {
   max-width: breakpoints('hd');
+}
+
+.container-md {
+  max-width: breakpoints('xxxl');
 }
 
 a {

@@ -21,8 +21,7 @@
   &__author {
     position: relative;
     padding-right: space('xs');
-    @extend %divider-line; // твоя вертикальная линия
-
+    @extend %divider-line;
     span {
       color: color('accent-purple');
     }
@@ -39,43 +38,25 @@
   }
 }
 
-/* большая карточка с рамкой (Home – Featured Post) */
 .post-card--featured {
   @include border();
 }
 
-/* компактная, без картинки (список справа на Home) */
 .post-card--compact {
-  padding: space(25px) space('xxl'); // пример: убрала боковые паддинги, если нужно
+  padding: space(25px) space('xxl');
 
   .post-card__title {
     @include heading(fs('md'), fw('bold'), lh('md'));
     max-width: 370px;
     margin-bottom: space('sm');
   }
-
-  .post-card__media {
-    margin-bottom: 0; // если нет картинки, можно не использовать элемент
-  }
 }
 
-/* подсвеченная карточка */
 .post-card--highlight {
   background-color: color('accent-light-yellow-color');
 }
 
-/* горизонтальная карточка: картинка слева, текст справа (Blog, Category, Author) */
 .post-card--horizontal {
   display: flex;
-  gap: space('xl');
-  padding: 0; // паддинги задаст список / секция
-
-  .post-card__media {
-    flex: 0 0 280px;
-    margin-bottom: 0;
-  }
-
-  .post-card__body {
-    flex: 1 1 auto;
-  }
+  gap: space('xxl');
 }
