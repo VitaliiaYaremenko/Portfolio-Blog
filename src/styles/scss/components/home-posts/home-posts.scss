@@ -10,6 +10,10 @@
 
   &__title {
     margin-bottom: space('xxl');
+
+    &--recent {
+      margin-bottom: 0;
+    }
   }
 
   &__recent {
@@ -18,10 +22,6 @@
 
   &__recent-header {
     margin-bottom: space('xxl');
-  }
-
-  &__recent-title {
-    margin-bottom: 0;
   }
 
   &__recent-header {

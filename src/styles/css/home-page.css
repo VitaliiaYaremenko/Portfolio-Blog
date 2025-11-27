@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .about__content {
   display: flex;
 }
@@ -204,13 +203,18 @@ body.is-locked {
   overflow: hidden;
 }
 
-.container {
+.container,
+.container-md {
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .container {
   max-width: 1280px;
+}
+
+.container-md {
+  max-width: 1024px;
 }
 
 a {
@@ -397,14 +401,14 @@ img {
 .home-posts__title {
   margin-bottom: 32px;
 }
+.home-posts__title--recent {
+  margin-bottom: 0;
+}
 .home-posts__recent {
   flex: 1 1 50%;
 }
 .home-posts__recent-header {
   margin-bottom: 32px;
-}
-.home-posts__recent-title {
-  margin-bottom: 0;
 }
 .home-posts__link {
   color: #592EA9;
@@ -467,12 +471,10 @@ img {
   margin-bottom: 32px;
 }
 
-/* большая карточка с рамкой (Home – Featured Post) */
 .post-card--featured {
   border: 1px solid #afb0b7;
 }
 
-/* компактная, без картинки (список справа на Home) */
 .post-card--compact {
   padding: 25px 32px;
 }
@@ -483,27 +485,14 @@ img {
   max-width: 370px;
   margin-bottom: 8px;
 }
-.post-card--compact .post-card__media {
-  margin-bottom: 0;
-}
 
-/* подсвеченная карточка */
 .post-card--highlight {
   background-color: #FBF6EA;
 }
 
-/* горизонтальная карточка: картинка слева, текст справа (Blog, Category, Author) */
 .post-card--horizontal {
   display: flex;
-  gap: 24px;
-  padding: 0;
-}
-.post-card--horizontal .post-card__media {
-  flex: 0 0 280px;
-  margin-bottom: 0;
-}
-.post-card--horizontal .post-card__body {
-  flex: 1 1 auto;
+  gap: 32px;
 }
 
 @media (max-width: 1150px) {
