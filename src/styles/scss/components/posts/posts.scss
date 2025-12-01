@@ -1,7 +1,0 @@
-.posts {
-  &__content {
-    @extend %flex-between;
-    gap: space('xxl');
-  }
-}
-

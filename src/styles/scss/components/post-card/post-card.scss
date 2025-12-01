@@ -3,11 +3,13 @@
   padding: space('xxl');
 
   &__media {
+    margin-bottom: space('xxl');
+
     img {
       max-width: 100%;
       height: auto;
+      display: block;
     }
-    margin-bottom: space('xxl');
   }
 
   &__meta {
@@ -20,7 +22,6 @@
     position: relative;
     padding-right: space('xs');
     @extend %divider-line;
-
     span {
       color: color('accent-purple');
     }
@@ -37,10 +38,13 @@
   }
 }
 
-
-.post-card--featured { @include border(); }
+.post-card--featured {
+  @include border();
+}
 
 .post-card--compact {
+  padding: space(25px) space('xxl');
+
   .post-card__title {
     @include heading(fs('md'), fw('bold'), lh('md'));
     max-width: 370px;
@@ -48,5 +52,11 @@
   }
 }
 
-.post-card--highlight { background-color: color('accent-light-yellow-color'); }
+.post-card--highlight {
+  background-color: color('accent-light-yellow-color');
+}
 
+.post-card--horizontal {
+  display: flex;
+  gap: space('xxl');
+}

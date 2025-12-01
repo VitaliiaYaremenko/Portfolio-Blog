@@ -1,0 +1,20 @@
+@include media('xl') {
+  .home-posts__layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-posts__recent {
+    padding: 0 space('xl');
+  }
+}
+
+@include media('sm') {
+  .home-posts__recent {
+    padding: 0;
+  }
+
+  .home-posts__recent-title {
+    font-size: fs('md');
+  }
+}
