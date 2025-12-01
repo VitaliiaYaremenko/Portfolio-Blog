@@ -1,0 +1,35 @@
+.category-content {
+
+  &__list {
+    @extend %flex-column;
+    gap: space('xxl');
+  }
+
+  .post-card--category {
+    align-items: center;
+    padding: 0;
+
+    .post-card__media {
+      margin-bottom: 0;
+    }
+
+    .post-card__body {
+      max-width: 512px;
+      align-items: center;
+    }
+
+    .post-card__subtitle{
+      margin-bottom: space('base');
+    }
+
+    .post-card__category {
+      color: color('accent-purple');
+      @include heading(fs('xs'), fw('semi-bold'), lh('sm'),  0.19em);
+      margin-bottom: space('lg');
+    }
+
+    .post-card__description {
+      color: color('secondary-text-color');
+    }
+  }
+}
